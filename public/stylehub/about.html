@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Story & Philosophy | About StyleHub</title>
+<meta name="description" content="StyleHub was founded on accessible luxury — discover our story, design philosophy, the designers behind the label and our sustainability commitments.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/responsive.css">
+</head><body>
+<header class="header" data-header></header>
+<main>
+  <section class="page-hero"><div class="container">
+    <p class="crumbs"><a href="index.html">Home</a> / About Us</p>
+    <h1>Accessible Luxury, Since 2016</h1><p>Designed in Mumbai. Worn everywhere.</p></div></section>
+
+  <section class="section"><div class="container split">
+    <div class="reveal"><p class="eyebrow">Our story</p><h2>How StyleHub Began</h2><div class="gold-rule"></div>
+      <p class="muted">StyleHub started in a two-room studio with a simple frustration: beautifully made clothing was priced out of reach, and affordable clothing rarely lasted a season. We set out to close that gap.</p>
+      <p class="muted">Today we design in-house, work directly with a small circle of ateliers and skip the traditional retail mark-up — so a hand-finished blazer or a silk-touch dress costs what it should, not what a department store decides.</p>
+      <a class="btn btn--pink" href="products.html">Shop the collection</a></div>
+    <img class="reveal" src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1200&q=80" alt="StyleHub flagship store interior"></div></section>
+
+  <section class="section" style="background:#fff"><div class="container">
+    <div class="section-head center reveal"><p class="eyebrow">What we stand for</p><h2>Our Philosophy</h2><div class="gold-rule"></div></div>
+    <div class="grid-3" id="values"></div></div></section>
+
+  <section class="section"><div class="container">
+    <div class="section-head center reveal"><p class="eyebrow">The people</p><h2>Meet Our Designers</h2><div class="gold-rule"></div></div>
+    <div class="product-grid" id="designers"></div></div></section>
+
+  <section class="section" style="padding-top:0"><div class="container split">
+    <img class="reveal" src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=80" alt="Sustainable fabric rolls in the StyleHub studio">
+    <div class="reveal"><p class="eyebrow">Responsibility</p><h2>Sustainability at StyleHub</h2><div class="gold-rule"></div>
+      <ul class="muted" style="padding-left:18px">
+        <li><b>Sustainable materials</b> — organic cotton, recycled polyester and certified viscose across 70% of the range.</li>
+        <li><b>Responsible manufacturing</b> — audited partner ateliers with fair wages and safe conditions.</li>
+        <li><b>Reduced packaging</b> — plastic-free mailers made from 90% recycled paper.</li>
+        <li><b>Ethical fashion</b> — small-batch production to cut overstock and waste.</li>
+      </ul></div></div></section>
+</main>
+<footer class="footer" data-footer></footer>
+<script src="js/data.js"></script><script src="js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const values = [
+    ['Quality', 'Premium fabrics, reinforced seams and finishing checked piece by piece.'],
+    ['Individuality', 'Versatile silhouettes designed to be styled your way, not ours.'],
+    ['Modern Design', 'Clean lines and considered proportions with a contemporary edge.'],
+  ];
+  document.getElementById('values').innerHTML = values.map(([t, d]) => `
+    <div class="value-card reveal"><div class="ico">★</div><h3>${t}</h3><p class="muted">${d}</p></div>`).join('');
+  const designers = [
+    ['Aarav Mehta', 'Creative Director', IMG.d4, 'Leads tailoring and menswear, ex-Milan atelier.'],
+    ['Isha Kapoor', 'Head of Womenswear', IMG.d1, 'Known for fluid drapes and evening silhouettes.'],
+    ['Rhea Dsouza', 'Textile & Sustainability', IMG.d2, 'Sources every fabric we cut, responsibly.'],
+    ['Kabir Nair', 'Footwear & Accessories', IMG.d3, 'Builds the shoes and bags that finish a look.'],
+  ];
+  document.getElementById('designers').innerHTML = designers.map(([n, r, img, b]) => `
+    <article class="designer reveal"><img src="${img}" alt="${n}, ${r}">
+      <div class="body"><span class="brand">${r}</span><h3 style="font-family:var(--body);font-size:1.05rem;margin:4px 0">${n}</h3><p class="muted" style="font-size:.9rem;margin:0">${b}</p></div></article>`).join('');
+  revealNew();
+});
+</script>
+</body></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StyleHub — Premium Fashion & Apparel Online Store</title>
+<meta name="description" content="StyleHub is a premium fashion destination for men, women and kids. Shop new-season dresses, shirts, denim, footwear and accessories with up to 40% off.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header" data-header></header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=80')"></div>
+    <div class="container">
+      <div class="hero__inner reveal">
+        <span class="promo-badge">✨ New Season 2026 Collection</span>
+        <h1>Elegance Redefined for modern Living.</h1>
+        <p style="font-size:1.15rem;color:#e2e2ec;margin-bottom:28px;max-width:520px">
+          Explore refined silhouettes, hand-selected luxury fabrics, and contemporary tailoring built to elevate your daily wardrobe.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn--pink" href="products.html">Shop New Arrivals</a>
+          <a class="btn btn--ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="about.html">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Showcase -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Curated Collections</p>
+        <h2>Shop By Category</h2>
+        <div class="gold-rule"></div>
+        <p>Discover hand-crafted pieces made for every occasion, season, and style.</p>
+      </div>
+      <div class="grid-3" id="categoryCards"></div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div class="section-head reveal">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+          <div>
+            <p class="eyebrow">Handpicked for You</p>
+            <h2>Featured Pieces</h2>
+            <div class="gold-rule"></div>
+          </div>
+          <a class="link-underline" style="color:var(--pink);margin-bottom:12px;font-weight:600" href="products.html">View All Products →</a>
+        </div>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <section class="section" style="padding:0">
+    <div style="position:relative;background:#1A1A2E;color:#fff;padding:84px 0;overflow:hidden">
+      <div style="position:absolute;inset:0;opacity:.28;background:url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80') center/cover"></div>
+      <div class="container" style="position:relative;z-index:2">
+        <div style="max-width:580px" class="reveal">
+          <span class="eyebrow" style="color:var(--gold-light)">Mid-Season Offer</span>
+          <h2 style="color:#fff">Up to 40% Off Select Wardrobe Essentials</h2>
+          <p style="color:#d9d9f0">Use code <b style="color:var(--gold-light)">FASHION30</b> or <b style="color:var(--gold-light)">WELCOME20</b> at checkout for additional discounts across all tailoring and evening wear.</p>
+          <a class="btn btn--gold" style="margin-top:12px" href="products.html">Shop Sale Edit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Products -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Most Loved This Week</p>
+        <h2>Trending Now</h2>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="product-grid" id="trendingGrid"></div>
+    </div>
+  </section>
+
+  <!-- Value Props -->
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <div class="grid-3" style="text-align:center">
+        <div class="value-card reveal">
+          <div style="font-size:2rem;margin-bottom:10px">✈️</div>
+          <h3>Express Delivery</h3>
+          <p class="muted">Free express shipping on all orders over ₹2,999 delivered straight to your doorstep.</p>
+        </div>
+        <div class="value-card reveal">
+          <div style="font-size:2rem;margin-bottom:10px">🔁</div>
+          <h3>30-Day Easy Returns</h3>
+          <p class="muted">Hassle-free pick-up and instant refunds on all unworn items with tags intact.</p>
+        </div>
+        <div class="value-card reveal">
+          <div style="font-size:2rem;margin-bottom:10px">🔒</div>
+          <h3>Secure Checkout</h3>
+          <p class="muted">Encrypted payments via Credit/Debit Cards, NetBanking, UPI, and Cash on Delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" data-footer></footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

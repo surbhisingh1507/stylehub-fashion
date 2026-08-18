@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Collection | StyleHub</title>
+<meta name="description" content="Shop the complete StyleHub collection — premium clothing, footwear, and luxury accessories for Men, Women and Kids.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header" data-header></header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a> / <span id="crumbLabel">Collections</span></p>
+      <h1 id="listTitle">The Collection</h1>
+      <p id="listSubtitle">Thoughtfully designed wardrobe staples, statement pieces and accessories crafted with luxury materials.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="products-layout">
+        <!-- Sidebar Filters -->
+        <aside class="layout-sidebar panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+            <h3 style="font-family:var(--body);font-size:1rem;margin:0">Filters</h3>
+            <button class="link-underline" id="clearFilters" style="background:none;border:none;cursor:pointer;color:var(--pink);font-size:.88rem">Clear All</button>
+          </div>
+
+          <div class="filter-group">
+            <h4>Category</h4>
+            <div class="filter-options" id="fCategory"></div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Subcategory</h4>
+            <div class="filter-options" id="fSub"></div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Brand</h4>
+            <div class="filter-options" id="fBrand"></div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Max Price (<span id="priceLabel">₹14,000</span>)</h4>
+            <input type="range" id="fPrice" min="500" max="14000" step="250" value="14000" style="width:100%">
+          </div>
+
+          <div class="filter-group">
+            <h4>Size</h4>
+            <div class="chips" id="fSize"></div>
+          </div>
+
+          <div class="filter-group">
+            <h4>Colour</h4>
+            <div class="swatches" id="fColor"></div>
+          </div>
+        </aside>
+
+        <!-- Main Product Grid -->
+        <div class="layout-main">
+          <div class="grid-controls panel">
+            <div class="search-input-wrap">
+              <input type="search" id="listSearch" placeholder="Search in collection…">
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+              <span id="resultCount" class="muted" style="font-size:.9rem">Showing products</span>
+              <select id="sortBy" class="select-sort">
+                <option value="popular">Most Popular</option>
+                <option value="newest">Newest Arrivals</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="product-grid" id="grid"></div>
+          <div id="emptyState"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" data-footer></footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us & Store Locator | StyleHub</title>
+<meta name="description" content="Get in touch with StyleHub — store addresses, phone, email, opening hours and a contact form for orders, returns and styling help.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/responsive.css">
+</head><body>
+<header class="header" data-header></header>
+<main>
+  <section class="page-hero"><div class="container">
+    <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
+    <h1>We'd Love to Hear From You</h1><p>Styling advice, order help or partnerships — our team replies within 24 hours.</p></div></section>
+
+  <section class="section"><div class="container split">
+    <div class="reveal">
+      <p class="eyebrow">Contact information</p><h2>Get in Touch</h2><div class="gold-rule"></div>
+      <div class="panel"><p style="margin:0"><b>Flagship Store</b><br class="muted">12 Linden Boulevard, Bandra West, Mumbai 400050, India</p></div>
+      <div class="panel"><p style="margin:0"><b>Phone</b><br><a class="link-underline" href="tel:+912244881200">+91 22 4488 1200</a></p></div>
+      <div class="panel"><p style="margin:0"><b>Email</b><br><a class="link-underline" href="mailto:hello@stylehub.com">hello@stylehub.com</a></p></div>
+      <div class="panel"><p style="margin:0"><b>Opening Hours</b><br>Mon – Sat: 10:00 – 20:00<br>Sunday: 11:00 – 18:00</p></div>
+    </div>
+    <div class="panel reveal">
+      <h3 style="font-family:var(--body);font-size:1rem">Send a Message</h3>
+      <form id="contactForm" novalidate>
+        <div class="row-2">
+          <div class="field"><label for="cname">Name</label><input id="cname" name="name"><span class="err"></span></div>
+          <div class="field"><label for="cemail">Email</label><input id="cemail" name="email" type="email"><span class="err"></span></div>
+        </div>
+        <div class="row-2">
+          <div class="field"><label for="cphone">Phone</label><input id="cphone" name="phone"><span class="err"></span></div>
+          <div class="field"><label for="csubject">Subject</label><input id="csubject" name="subject"><span class="err"></span></div>
+        </div>
+        <div class="field"><label for="cmessage">Message</label><textarea id="cmessage" name="message" rows="5"></textarea><span class="err"></span></div>
+        <button class="btn btn--pink btn--block" type="submit">Send Message</button>
+        <p class="note note--ok" id="contactMsg" style="display:none"></p>
+      </form>
+    </div>
+  </div></section>
+
+  <section class="section" style="padding-top:0"><div class="container">
+    <div class="section-head reveal"><p class="eyebrow">Store locator</p><h2>Visit a StyleHub Store</h2><div class="gold-rule"></div></div>
+    <div class="map-mock reveal"><span class="pin">📍 StyleHub Flagship — Bandra West, Mumbai</span></div>
+    <div class="grid-3" style="margin-top:24px" id="stores"></div>
+  </div></section>
+</main>
+<footer class="footer" data-footer></footer>
+<script src="js/data.js"></script><script src="js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const stores = [
+    ['Mumbai — Flagship', '12 Linden Boulevard, Bandra West', '10:00 – 20:00'],
+    ['Delhi — Khan Market', '8 Rue Terrace, Khan Market', '11:00 – 21:00'],
+    ['Bengaluru — Indiranagar', '404 100ft Road, Indiranagar', '10:30 – 20:30'],
+  ];
+  document.getElementById('stores').innerHTML = stores.map(([n, a, h]) => `
+    <div class="value-card reveal"><h3>${n}</h3><p class="muted" style="margin:0">${a}<br>Open daily ${h}</p></div>`).join('');
+  const f = document.getElementById('contactForm');
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    const ok = validate(f, {
+      name: v => v.length >= 3 || 'Enter your name',
+      email: isEmail, phone: isPhone,
+      subject: v => v.length >= 3 || 'Add a short subject',
+      message: v => v.length >= 10 || 'Please write at least 10 characters',
+    });
+    if (!ok) { toast('Please fix the highlighted fields', 'err'); return; }
+    const msg = document.getElementById('contactMsg');
+    msg.style.display = 'block';
+    msg.textContent = 'Thank you! Your message has been received. Our team will reply within 24 hours.';
+    toast('Message sent successfully', 'ok');
+    f.reset();
+  });
+  revealNew();
+});
+</script>
+</body></html>
