@@ -321,7 +321,7 @@ http://localhost:5173
 ## 🌐 Live Website
 
 **Live Demo:**
-`<YOUR-LIVE-WEBSITE-URL>`
+`https://stylehub-fashion-7sg1cy2lb-surbhi7.vercel.app/stylehub/index.html`
 
 The live version can be deployed using:
 
@@ -333,7 +333,7 @@ The live version can be deployed using:
 ## 💻 GitHub Repository
 
 **Source Code:**
-`<YOUR-GITHUB-REPOSITORY-URL>`
+`https://github.com/surbhisingh1507/stylehub-fashion`
 
 The repository contains:
 
@@ -351,5 +351,5 @@ The repository contains:
 ## 🎥 YouTube Demonstration
 
 **Project Demo Video:**
-`<YOUR-YOUTUBE-VIDEO-URL>`
+`https://www.youtube.com/watch?v=p8BNthI_Gog`
 
