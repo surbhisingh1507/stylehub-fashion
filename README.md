@@ -321,7 +321,7 @@ http://localhost:5173
 ## 🌐 Live Website
 
 **Live Demo:**
-`https://stylehub-fashion-7sg1cy2lb-surbhi7.vercel.app/stylehub/index.html`
+stylehub-fashion-virid.vercel.app
 
 The live version can be deployed using:
 
